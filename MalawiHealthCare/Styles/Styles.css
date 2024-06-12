@@ -1,0 +1,12 @@
+﻿.Label {
+    font-family:Arial;
+    font-size:15px;
+    color: black;
+
+}
+.Textbox {
+    height:30px;
+    width:200px;
+    font-size:15px;
+    color: black;
+}

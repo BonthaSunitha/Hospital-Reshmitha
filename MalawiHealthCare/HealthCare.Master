@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HealthCare.master.cs" Inherits="MalawiHealthCare.HealthCare" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+  <style>
+ footer {
+      position:absolute;   
+      text-align: center;
+      padding-right: 100px;
+      padding-left: 200px;
+      height: auto;
+      width:100%;
+      bottom :0;
+      color: cornflowerblue;
+      font-size:10px;
+    }
+      </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">RIS</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Healtcare Management System</a></li>
+           </ul>  
+   </div>
+   </nav>
+
+
+
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+               <footer>
+<span> &copy; Copyright <b>Rashmitha Information Systems Pvt Ltd</b>.. All Rights Reserved </span><br />
+<span> designed by <a href="https://rashmitha.com/" >RIS </a> </span>
+</footer>
+        </div>
+    </form>
+</body>
+</html>

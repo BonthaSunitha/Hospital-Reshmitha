@@ -1,0 +1,20 @@
+CREATE TABLE [dbo].[Tbl_PatiendDetails](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[Country] [nvarchar](50) NOT NULL,
+	[DOB] [date] NOT NULL,
+	[Gender] [varchar](50) NOT NULL,
+	[District] [nvarchar](50) NOT NULL,
+	[Zone] [nvarchar](50) NOT NULL,
+	[PreConditions] [nvarchar](max) NOT NULL,
+	[Type] [nchar](10) NOT NULL,
+	[MedObligation] [nvarchar](max) NOT NULL,
+	[BP] [nvarchar](50) NOT NULL,
+	[Weight] [nvarchar](50) NOT NULL,
+	[Height] [nvarchar](50) NOT NULL,
+	[Observations] [nvarchar](max) NOT NULL,
+	[IDNo] [nvarchar](250) NOT NULL,
+	[ReferNo] [nvarchar](50) NOT NULL,
+	[Picture] [varbinary](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
