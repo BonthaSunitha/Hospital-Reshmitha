@@ -35,8 +35,9 @@ namespace MalawiHealthCare
             string Observations = txtareaobservation.Value;
             string ID = txtuniqueidno.Text;
             string ReferTo = Txtreferto.Text;
+            byte[] ImageData = fileuploadprofilepicture.FileBytes;
 
-            string query = "INSERT INTO [dbo].[Tbl_PatiendDetails2] ([Name],[Country],[DOB],[Gender],[District],[Zone],[PreConditions],[Type],[MedObligation],[BP],[Weight],[Height],[Observations],[IDNo],[ReferNo]) VALUES (@Name, @Country, @DOB,@Gender,@Dist,@Zone,@PreConditions,@PatientType,@MedObligations,@BP,@Weight,@Height,@Observations,@ID,@ReferTo)";
+            string query = "INSERT INTO [dbo].[Tbl_PatiendDetails2] ([Name],[Country],[DOB],[Gender],[District],[Zone],[PreConditions],[Type],[MedObligation],[BP],[Weight],[Height],[Observations],[IDNo],[ReferNo],[Picture]) VALUES (@Name, @Country, @DOB,@Gender,@Dist,@Zone,@PreConditions,@PatientType,@MedObligations,@BP,@Weight,@Height,@Observations,@ID,@ReferTo,@ImageData)";
 
            using (SqlConnection connection = new SqlConnection("ConnectionString"))
             {
@@ -60,6 +61,7 @@ namespace MalawiHealthCare
                     command.Parameters.AddWithValue("@Observations", Observations);
                     command.Parameters.AddWithValue("@ID", ID);
                     command.Parameters.AddWithValue("@ReferTo", ReferTo);
+                    command.Parameters.AddWithValue("@ImageData", ImageData);
 
                     int rowsAffected = command.ExecuteNonQuery();
 
